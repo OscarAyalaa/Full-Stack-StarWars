@@ -1,0 +1,65 @@
+<div class="detail-container">
+
+    <button class="back-button" (click)="goBack()">
+        ← Back to Characters
+    </button>
+
+    @if (character(); as characterData) {
+
+        <div class="character-card">
+
+            <div class="character-header">
+                <h1>{{ characterData.name }}</h1>
+                <span>ID: {{ characterData.id }}</span>
+            </div>
+
+            <div class="character-info">
+
+                <div class="info-item">
+                    <span class="label">Height</span>
+                    <span>{{ characterData.height }} cm</span>
+                </div>
+
+                <div class="info-item">
+                    <span class="label">Mass</span>
+                    <span>{{ characterData.mass }} kg</span>
+                </div>
+
+                <div class="info-item">
+                    <span class="label">Gender</span>
+                    <span>{{ characterData.gender }}</span>
+                </div>
+
+                <div class="info-item">
+                    <span class="label">Hair</span>
+                    <span>{{ characterData.hair_color }}</span>
+                </div>
+
+                <div class="info-item">
+                    <span class="label">Skin</span>
+                    <span>{{ characterData.skin_color }}</span>
+                </div>
+
+                <div class="info-item">
+                    <span class="label">Eyes</span>
+                    <span>{{ characterData.eye_color }}</span>
+                </div>
+
+                <div class="info-item">
+                    <span class="label">Birth Year</span>
+                    <span>{{ characterData.birth_year }}</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    } @else {
+
+        <div class="loading">
+            Loading character...
+        </div>
+
+    }
+
+</div>
